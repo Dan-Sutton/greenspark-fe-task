@@ -2,18 +2,17 @@
   @apply inline-block cursor-pointer focus:outline-none;
 
   &__slider {
-    @apply relative w-10 h-5 rounded-full border border-[#AFC6BD] transition-colors duration-300;
-    -webkit-box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+    @apply relative w-10 h-5 rounded-full border-[0.7px] border-[#AFC6BD] transition-colors duration-300;
+    box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.07);
 
     &--checked {
       @apply bg-customDarkGreen border-customGrey;
     }
 
     &__switch {
-      @apply absolute flex justify-center items-center top-0 left-0 -translate-y-[1px] -translate-x-[2px] w-5 h-5 bg-white rounded-full border border-[#F2EBDB];
+      @apply absolute flex justify-center items-center top-0 left-0 -translate-y-[0.75px] -translate-x-[2px] w-[20.5px] h-[20.5px] bg-white rounded-full border-[0.7px] border-[#F2EBDB];
       @apply transition-transform duration-300;
+      box-shadow: 0px 0px 1px 0.1px rgba(0, 0, 0, 0.35);
 
       &--checked {
         @apply transform translate-x-5 border-customDarkGreen;
@@ -23,13 +22,13 @@
         @apply absolute flex justify-center items-center w-0 h-0 bg-customLightGreen rounded-full overflow-hidden opacity-0 transition-all duration-100;
 
         &__center {
-          @apply w-5 h-5 bg-white rounded-full border border-[#F2EBDB] shadow-md;
+          @apply w-[20.5px] h-[20.5px] bg-white rounded-full border-[0.7px] border-[#F2EBDB] shadow-md;
         }
       }
     }
 
     &:hover .toggle__slider__switch__hover {
-      @apply w-[38px] h-[38px] opacity-50;
+      @apply w-[32px] h-[32px] opacity-50;
     }
   }
 }
