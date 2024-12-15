@@ -10,7 +10,7 @@
     }
 
     &__switch {
-      @apply absolute flex justify-center items-center top-0 left-0 -translate-y-[0.75px] -translate-x-[2px] w-[20.5px] h-[20.5px] bg-white rounded-full border-[0.7px] border-[#F2EBDB];
+      @apply absolute flex justify-center items-center top-0 left-0 -translate-y-[1px] -translate-x-[2px] w-[20px] h-[20px] bg-white rounded-full border-[0.7px] border-[#F2EBDB];
       @apply transition-transform duration-300;
       box-shadow: 0px 0px 1px 0.1px rgba(0, 0, 0, 0.35);
 
@@ -22,7 +22,7 @@
         @apply absolute flex justify-center items-center w-0 h-0 bg-customLightGreen rounded-full overflow-hidden opacity-0 transition-all duration-100;
 
         &__center {
-          @apply w-[20.5px] h-[20.5px] bg-white rounded-full border-[0.7px] border-[#F2EBDB] shadow-md;
+          @apply w-[20px] h-[20px] bg-white rounded-full border-[0.7px] border-[#F2EBDB] shadow-md;
         }
       }
     }
