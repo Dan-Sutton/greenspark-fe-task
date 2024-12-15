@@ -1,0 +1,35 @@
+.toggle {
+  @apply inline-block cursor-pointer focus:outline-none;
+
+  &__slider {
+    @apply relative w-10 h-5 rounded-full border border-[#AFC6BD] transition-colors duration-300;
+    -webkit-box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+
+    &--checked {
+      @apply bg-customDarkGreen border-customGrey;
+    }
+
+    &__switch {
+      @apply absolute flex justify-center items-center top-0 left-0 -translate-y-[1px] -translate-x-[2px] w-5 h-5 bg-white rounded-full border border-[#F2EBDB];
+      @apply transition-transform duration-300;
+
+      &--checked {
+        @apply transform translate-x-5 border-customDarkGreen;
+      }
+
+      &__hover {
+        @apply absolute flex justify-center items-center w-0 h-0 bg-customLightGreen rounded-full overflow-hidden opacity-0 transition-all duration-100;
+
+        &__center {
+          @apply w-5 h-5 bg-white rounded-full border border-[#F2EBDB] shadow-md;
+        }
+      }
+    }
+
+    &:hover .toggle__slider__switch__hover {
+      @apply w-[38px] h-[38px] opacity-50;
+    }
+  }
+}

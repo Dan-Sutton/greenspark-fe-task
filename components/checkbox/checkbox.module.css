@@ -1,0 +1,32 @@
+.checkbox {
+  @apply relative inline-block w-[33.75px] h-[33.75px] cursor-pointer;
+}
+
+.input {
+  @apply absolute opacity-0 w-full h-full;
+}
+
+.pseudoCheckbox {
+  @apply absolute top-0 left-0 w-full h-full transition-shadow border-4 border-customBlack rounded-[5px] flex items-center justify-center;
+}
+
+.pseudoCheckbox::before {
+  content: "";
+  @apply absolute top-1/2 left-1/2 w-0 h-0 bg-customLightGreen opacity-50 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-75 ease-out;
+}
+
+.checkbox:hover .pseudoCheckbox::before {
+  @apply w-[70px] h-[70px];
+}
+
+.input:checked + .pseudoCheckbox {
+  @apply bg-customGreen border-customGreen;
+}
+
+.tick {
+  @apply hidden w-4 h-4;
+}
+
+.input:checked + .pseudoCheckbox .tick {
+  @apply block;
+}
