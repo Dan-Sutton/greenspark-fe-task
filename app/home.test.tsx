@@ -98,4 +98,30 @@ describe("Home", () => {
     expect(screen.getByText("15 trees")).toBeInTheDocument();
     expect(screen.getByText("300 plastic bottles")).toBeInTheDocument();
   });
+
+  it("toggles one ProductWidget to active and ensures others are inactive", async () => {
+    const { container } = render(<Home />);
+
+    // Wait for the data to be fetched and rendered
+    await waitFor(() => {
+      const productWidgets = container.querySelectorAll(".product");
+      expect(productWidgets).toHaveLength(3);
+    });
+
+    // Get all toggle switches
+    const toggles = screen.getAllByRole("switch");
+
+    // Initially, the third widget is active
+    expect(toggles[0]).not.toBeChecked();
+    expect(toggles[1]).not.toBeChecked();
+    expect(toggles[2]).toBeChecked();
+
+    // Toggle the first widget to active
+    fireEvent.click(toggles[0]);
+
+    // Check that the first widget is now active and others are inactive
+    expect(toggles[0]).toBeChecked();
+    expect(toggles[1]).not.toBeChecked();
+    expect(toggles[2]).not.toBeChecked();
+  });
 });

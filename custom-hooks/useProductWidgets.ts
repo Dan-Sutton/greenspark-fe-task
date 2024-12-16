@@ -44,7 +44,10 @@ const useProductWidgets = () => {
           active,
         };
       }
-      return item;
+      return {
+        ...item,
+        active: active ? false : item.active,
+      };
     });
 
     setData(updatedData);
