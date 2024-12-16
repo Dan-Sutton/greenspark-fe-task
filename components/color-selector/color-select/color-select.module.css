@@ -31,5 +31,9 @@
     &--black {
       @apply bg-customBlack;
     }
+
+    &:hover {
+      @apply opacity-80;
+    }
   }
 }
