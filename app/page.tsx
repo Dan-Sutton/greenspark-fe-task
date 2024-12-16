@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Toggle from "@/components/toggle/toggle";
 import ColorSelect from "@/components/color-select/color-select";
+import Checkbox from "@/components/checkbox/checkbox";
 
 export default function Home() {
   return (
@@ -12,6 +12,8 @@ export default function Home() {
         <ColorSelect color="ivory" />
         <ColorSelect color="white" />
         <ColorSelect color="black" />
+
+        <Checkbox />
       </main>
     </div>
   );

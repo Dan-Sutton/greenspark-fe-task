@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./checkbox.module.css";
 import Image from "next/image";
+import styles from "./checkbox.module.css";
 
 interface CheckboxProps {
   checked?: boolean;
   onChange?: (checked: boolean) => void;
 }
 
-export function Checkbox({ checked = false, onChange }: CheckboxProps) {
+export default function Checkbox({ checked = false, onChange }: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = () => {
@@ -29,11 +29,13 @@ export function Checkbox({ checked = false, onChange }: CheckboxProps) {
         className={styles.checkbox__input}
       />
       <span
-        className={`${styles.checkbox__box} ${isChecked ? styles.checked : ""}`}
+        className={`${styles.checkbox__box} ${
+          isChecked ? styles["checkbox__box--checked"] : ""
+        }`}
       >
         <Image
           className={`${styles.checkbox__tick} ${
-            isChecked ? styles.visible : ""
+            isChecked ? styles["checkbox__tick--visible"] : ""
           }`}
           src="/tick.svg"
           alt="tick"
