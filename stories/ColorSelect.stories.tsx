@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import ColorSelect from "@/components/color-select/color-select";
+import ColorSelect from "@/components/color-selector/color-select/color-select";
 
 const meta: Meta<typeof ColorSelect> = {
   title: "Color Selector",

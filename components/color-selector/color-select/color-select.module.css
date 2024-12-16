@@ -1,4 +1,4 @@
-.checkbox {
+.colorSelect {
   @apply inline-flex items-center cursor-pointer;
 
   &__input {
@@ -6,34 +6,30 @@
   }
 
   &__box {
-    @apply w-[16px] h-[16px] transition-all duration-200;
-
-    &:hover {
-      @apply opacity-80;
-    }
+    @apply w-[16px] h-[16px] transition-colors duration-200;
 
     &--checked {
-      box-shadow: inset 0px 0px 0px 1px rgba(194, 194, 194, 1);
+      @apply border-[1.5px] border-customGrey;
     }
 
     &--blue {
       @apply bg-customBlue;
     }
 
-    &--ivory {
-      @apply bg-customIvory;
-    }
-
     &--green {
       @apply bg-customGreen;
     }
 
-    &--black {
-      @apply bg-customBlack;
+    &--ivory {
+      @apply bg-customIvory;
     }
 
     &--white {
       @apply bg-white;
+    }
+
+    &--black {
+      @apply bg-customBlack;
     }
   }
 }
