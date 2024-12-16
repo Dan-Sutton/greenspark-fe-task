@@ -40,7 +40,7 @@ Ensure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/greenspark-frontend-task.git
+   git clone https://github.com/Dan-Sutton/greenspark-fe-task.git
    cd greenspark-frontend-task
    ```
 
