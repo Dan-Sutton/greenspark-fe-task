@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["@storybook/addons"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
