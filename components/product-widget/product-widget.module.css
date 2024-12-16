@@ -42,6 +42,10 @@
   &__controls {
     &__control {
       @apply flex justify-between w-full px-[6px] text-[14px] text-customGreen mb-[10px];
+
+      &__tooltip {
+        @apply ml-[1px] -translate-y-[2px];
+      }
     }
   }
 }

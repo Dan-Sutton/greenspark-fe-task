@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./product-widget.module.css";
 import Checkbox from "../checkbox/checkbox";
 import ColorSelector from "../color-selector/color-selector";
 import Toggle from "../toggle/toggle";
 import { ProductWidgetData, selectedColor } from "./product-widget-data";
+import Tooltip from "../tooltip/tooltip";
 
 interface ProductWidgetProps {
   data: ProductWidgetData;
@@ -66,7 +67,16 @@ function ProductWidget({ data, onChange }: ProductWidgetProps) {
 
       <div className={styles.product__controls}>
         <span className={styles.product__controls__control}>
-          <label>Link to public Profile</label>
+          <label>
+            Link to public Profile
+            <Tooltip
+              message="This widget links directly to your public profile so that you can easily share your impact with your customers. Turn it off here if you do not want the badge to link to it."
+              iconSrc="/info_outline_icon.svg"
+              iconAlt="Tooltip icon"
+              linkLabel="View Public Profile"
+              link="/"
+            />
+          </label>
           <Checkbox
             checked={data.linked}
             onChange={(checked) => handleChange("linked", checked)}

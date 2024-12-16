@@ -1,0 +1,29 @@
+.tooltip {
+  @apply relative inline-block;
+
+  &__button {
+    @apply p-1;
+  }
+
+  &__icon {
+    @apply -translate-y-[2px] -translate-x-[2px];
+  }
+
+  &__content {
+    @apply absolute z-50 text-[14px] left-1/2 w-[245px] px-[16px] py-[24px] text-center transform -translate-x-1/2 mb-2 p-2 bg-white text-customBlack text-sm rounded-[4px] shadow-lg opacity-0 transition-opacity duration-300;
+    visibility: hidden;
+  }
+
+  &__content p {
+    @apply mb-3;
+  }
+
+  &__content a {
+    @apply font-bold text-customGreen;
+  }
+
+  &:hover &__content {
+    @apply opacity-100;
+    visibility: visible;
+  }
+}
