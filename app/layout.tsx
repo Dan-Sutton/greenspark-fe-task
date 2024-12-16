@@ -8,8 +8,8 @@ const cabin = Cabin({
 });
 
 export const metadata: Metadata = {
-  title: "Greenspark",
-  description: "Greenspark Frontend task",
+  title: "Greenspark FE Task",
+  description: "Greenspark Frontend task by Dewa Sutton",
 };
 
 export default function RootLayout({
