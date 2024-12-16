@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./toggle.module.css";
 
 interface ToggleProps {
@@ -9,6 +9,10 @@ interface ToggleProps {
 
 export default function Toggle({ checked = false, onChange }: ToggleProps) {
   const [isChecked, setIsChecked] = useState(checked);
+
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
 
   const handleChange = () => {
     setIsChecked(!isChecked);
