@@ -13,9 +13,9 @@ export function handleProductWidgetType(type: string) {
     case "carbon":
       return "kgs of carbon";
     case "plastic":
-      return "plastic bottles";
+      return " plastic bottles";
     case "trees":
-      return "Trees";
+      return " Trees";
     default:
       return "Unknown";
   }

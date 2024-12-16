@@ -5,7 +5,11 @@ import styles from "./product-widget.module.css";
 import Checkbox from "../checkbox/checkbox";
 import ColorSelector from "../color-selector/color-selector";
 import Toggle from "../toggle/toggle";
-import { ProductWidgetData, selectedColor } from "./product-widget-data";
+import {
+  handleProductWidgetType,
+  ProductWidgetData,
+  selectedColor,
+} from "./product-widget-data";
 import Tooltip from "../tooltip/tooltip";
 
 interface ProductWidgetProps {
@@ -60,7 +64,8 @@ function ProductWidget({ data, onChange }: ProductWidgetProps) {
             This product {data.action}
           </p>
           <h2 className={styles.product__header__info__status}>
-            {data.amount} {data.type}
+            {data.amount}
+            {handleProductWidgetType(data.type)}
           </h2>
         </div>
       </div>
