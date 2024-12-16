@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Greenspark Frontend Task
+
+Welcome to the Greenspark Frontend Task project! This project is built using Next.js and demonstrates the implementation of a product widget system.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+- [Testing](#testing)
+
+## Introduction
+
+This project is a frontend task for Greenspark, showcasing a product widget system. The application allows users to view and interact with various product widgets, each representing different types of products and actions.
+
+## Features
+
+- Display multiple product widgets
+- Fetch product data from an API
+- Store product data in local storage
+- Update product widget properties (color, active state, linked state)
+- Tooltip for additional information
+- Comprehensive unit tests
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed on your machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (>= 14.x)
+- npm (>= 6.x) or yarn (>= 1.x)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/your-username/greenspark-frontend-task.git
+   cd greenspark-frontend-task
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To start the development server, run:
 
-## Deploy on Vercel
+    npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open your browser and navigate to http://localhost:3000 to see the application in action.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Testing
+
+This project uses Jest and React Testing Library for unit testing. To run the tests, use the following command:
+
+    npm test
