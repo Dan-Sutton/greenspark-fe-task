@@ -18,7 +18,7 @@ export default {
         customGrey: "#B0B0B0",
         customGrey2: "#c2c2c2",
         customBlue: "#2f3a8d",
-        customIvory: "#F2EBDB",
+        custombeige: "#F2EBDB",
       },
     },
   },

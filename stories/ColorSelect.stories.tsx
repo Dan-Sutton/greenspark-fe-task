@@ -36,9 +36,9 @@ export const Green: Story = {
   },
 };
 
-export const Ivory: Story = {
+export const beige: Story = {
   args: {
-    color: "ivory",
+    color: "beige",
     onChange: (checked: boolean) => {
       console.log(`Toggle is now ${checked ? "checked" : "unchecked"}`);
     },

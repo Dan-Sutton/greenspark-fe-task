@@ -20,8 +20,8 @@
       @apply bg-customGreen;
     }
 
-    &--ivory {
-      @apply bg-customIvory;
+    &--beige {
+      @apply bg-custombeige;
     }
 
     &--white {

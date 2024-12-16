@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import styles from "./color-select.module.css";
+import { selectedColor } from "@/components/product-widget/product-widget-data";
 
 interface ColorSelectProps {
   checked?: boolean;
   onChange?: () => void;
-  color?: "blue" | "green" | "ivory" | "black" | "white";
+  color?: selectedColor;
 }
 
 export default function ColorSelect({

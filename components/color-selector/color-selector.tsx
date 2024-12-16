@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import ColorSelect from "./color-select/color-select";
 import styles from "./color-selector.module.css";
 
-function ColorSelector({ onChange }: { onChange: (color: string) => void }) {
+const colors = ["blue", "green", "beige", "white", "black"] as const;
+
+interface ColorSelectorProps {
+  onChange: (color: (typeof colors)[number]) => void;
+}
+
+function ColorSelector({ onChange }: ColorSelectorProps) {
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
-  const handleColorChange = (color: string) => {
+  const handleColorChange = (color: (typeof colors)[number]) => {
     setSelectedColor(color);
     if (onChange) {
       onChange(color);
@@ -15,31 +21,14 @@ function ColorSelector({ onChange }: { onChange: (color: string) => void }) {
 
   return (
     <div className={styles.selector}>
-      <ColorSelect
-        color="blue"
-        checked={selectedColor === "blue"}
-        onChange={() => handleColorChange("blue")}
-      />
-      <ColorSelect
-        color="green"
-        checked={selectedColor === "green"}
-        onChange={() => handleColorChange("green")}
-      />
-      <ColorSelect
-        color="ivory"
-        checked={selectedColor === "ivory"}
-        onChange={() => handleColorChange("ivory")}
-      />
-      <ColorSelect
-        color="white"
-        checked={selectedColor === "white"}
-        onChange={() => handleColorChange("white")}
-      />
-      <ColorSelect
-        color="black"
-        checked={selectedColor === "black"}
-        onChange={() => handleColorChange("black")}
-      />
+      {colors.map((color) => (
+        <ColorSelect
+          key={color}
+          color={color}
+          checked={selectedColor === color}
+          onChange={() => handleColorChange(color)}
+        />
+      ))}
     </div>
   );
 }
